@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+import "google/protobuf/timestamp.proto";
+
+option go_package = "./virtualAccount";
+
+message VAStatusSchedulerPayload {
+  string UUID = 1;
+  string vaNumber = 2;
+  string status = 3;
+  google.protobuf.Timestamp expiredAt = 4;
+}
